@@ -1,0 +1,100 @@
+* Workshop Tmux for beginners
+
+** Motivation and terminology
+
+Client server architecture
+Plaform independent
+Memory efficient
+Supports collaboration
+Ability to detach and attach sessions
+
+** Installation
+
+On Mac:
+
+#+BEGIN_EXAMPLE
+$ brew install tmux
+#+END_EXAMPLE
+
+or on (Ubuntu, Debian etc)
+
+#+BEGIN_EXAMPLE
+$ sudo apt-get install tmux
+#+END_EXAMPLE
+
+or manual build
+
+#+BEGIN_EXAMPLE
+$ wget https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
+$ tar xvf tmux-2.6.tar.gz
+$ cd tmux-2.6/
+$ sudo apt-get install -y exuberant-ctags cmake libevent-dev libncurses5-dev
+$ ./configure && make
+$ sudo make install
+#+END_EXAMPLE
+
+then re-run your terminal
+
+** First run and closing
+
+*** Start
+
+#+BEGIN_EXAMPLE
+$ tmux
+#+END_EXAMPLE
+
+[[./assets/tmux_firs_start.png]]
+
+*** End
+
+#+BEGIN_EXAMPLE
+$ exit
+#+END_EXAMPLE
+
+** Statusbar
+
+[[./assets/tmux_status_bar_annotated.png]]
+
+** Windows and Panes - Sessions
+
+** Prefix key and shortcuts
+
+*** Prefix key
+
+~Ctrl + b~ -> short version: ~C-b~
+
+*** Emacs or vi mode 
+
+Default emacs but it also depends on gloval $EDITOR setting in your shell.
+
+*** Help
+
+~C-b ?~
+
+[[./assets/tmux_help.png]]
+
+
+*** Tmux "command line"
+
+~C-b :~
+
+Try:
+
+#+BEGIN_EXAMPLE
+C-b :list-windows
+#+END_EXAMPLE
+
+[[./assets/tmux_list_windows.png]]
+
+Press ~q~ to quit.  
+
+** Cheat sheet
+
+| Command                   | Shortcut (<P> -> C-b) | Note                     |
+|---------------------------+-----------------------+--------------------------|
+| tmux new -s dev           |                       | Create new session "dev" |
+| tmux attach -t dev        |                       | Attach to dev session    |
+| tmux detach-client -s dev | <P> d                 | Detach from session      |
+|                           | <P> :                 | tmux command line        |
+
+   [[./tmux_beginners_cheatsheet.org][Cheat sheet]]
