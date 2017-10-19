@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-10-19 Thu 11:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Marek" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+	     margin-bottom: .2em; }
+  .subtitle { text-align: center;
+	      font-size: medium;
+	      font-weight: bold;
+	      margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+	    padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgb7942aa">1. Workshop Tmux for beginners</a>
+<ul>
+<li><a href="#orgced054a">1.1. Motivation and terminology</a></li>
+<li><a href="#org4f6e1b3">1.2. Installation</a></li>
+<li><a href="#orgd47de9b">1.3. First run and closing</a>
+<ul>
+<li><a href="#org510f697">1.3.1. Start</a></li>
+<li><a href="#org5a4c30a">1.3.2. End</a></li>
+</ul>
+</li>
+<li><a href="#orgae205cd">1.4. Statusbar</a></li>
+<li><a href="#org8c54b37">1.5. Windows and Panes - Sessions</a></li>
+<li><a href="#org2cb9f97">1.6. Commands, prefix key and shortcuts</a>
+<ul>
+<li><a href="#org1a96677">1.6.1. Prefix key</a></li>
+<li><a href="#orga66e0d7">1.6.2. Emacs or vi mode</a></li>
+<li><a href="#org5a5a285">1.6.3. Help</a></li>
+<li><a href="#org7b26388">1.6.4. Tmux "command line"</a></li>
+<li><a href="#orgb15e32a">1.6.5. Commands</a></li>
+<li><a href="#org1e770aa">1.6.6. Shortcuts</a></li>
+</ul>
+</li>
+<li><a href="#orgf07fc60">1.7. Next steps</a>
+<ul>
+<li><a href="#org80cb584">1.7.1. Configuration</a></li>
+<li><a href="#org3f9a2bb">1.7.2. Session management</a></li>
+<li><a href="#org25e565b">1.7.3. Plugins</a></li>
+</ul>
+</li>
+<li><a href="#org828d33d">1.8. Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb7942aa" class="outline-2">
+<h2 id="orgb7942aa"><span class="section-number-2">1</span> Workshop Tmux for beginners</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgced054a" class="outline-3">
+<h3 id="orgced054a"><span class="section-number-3">1.1</span> Motivation and terminology</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Client server architecture</li>
+<li>Plaform independent</li>
+<li>Memory efficient</li>
+<li>Supports collaboration</li>
+<li>Ability to detach and attach sessions</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4f6e1b3" class="outline-3">
+<h3 id="org4f6e1b3"><span class="section-number-3">1.2</span> Installation</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+On Mac:
+</p>
+
+<pre class="example">
+$ brew install tmux
+</pre>
+
+<p>
+or on (Ubuntu, Debian etc)
+</p>
+
+<pre class="example">
+$ sudo apt-get install tmux
+</pre>
+
+<p>
+or manual build
+</p>
+
+<pre class="example">
+$ wget https://github.com/tmux/tmux/releases/download/2.6/tmux-2.6.tar.gz
+$ tar xvf tmux-2.6.tar.gz
+$ cd tmux-2.6/
+$ sudo apt-get install -y exuberant-ctags cmake libevent-dev libncurses5-dev
+$ ./configure &amp;&amp; make
+$ sudo make install
+</pre>
+
+<p>
+then re-run your terminal
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd47de9b" class="outline-3">
+<h3 id="orgd47de9b"><span class="section-number-3">1.3</span> First run and closing</h3>
+<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org510f697" class="outline-4">
+<h4 id="org510f697"><span class="section-number-4">1.3.1</span> Start</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<pre class="example">
+$ tmux
+</pre>
+
+
+<div class="figure">
+<p><img src="./assets/tmux_firs_start.png" alt="tmux_firs_start.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5a4c30a" class="outline-4">
+<h4 id="org5a4c30a"><span class="section-number-4">1.3.2</span> End</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<pre class="example">
+$ exit
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgae205cd" class="outline-3">
+<h3 id="orgae205cd"><span class="section-number-3">1.4</span> Statusbar</h3>
+<div class="outline-text-3" id="text-1-4">
+
+<div class="figure">
+<p><img src="./assets/tmux_status_bar_annotated.png" alt="tmux_status_bar_annotated.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8c54b37" class="outline-3">
+<h3 id="org8c54b37"><span class="section-number-3">1.5</span> Windows and Panes - Sessions</h3>
+</div>
+
+<div id="outline-container-org2cb9f97" class="outline-3">
+<h3 id="org2cb9f97"><span class="section-number-3">1.6</span> Commands, prefix key and shortcuts</h3>
+<div class="outline-text-3" id="text-1-6">
+</div>
+<div id="outline-container-org1a96677" class="outline-4">
+<h4 id="org1a96677"><span class="section-number-4">1.6.1</span> Prefix key</h4>
+<div class="outline-text-4" id="text-1-6-1">
+<p>
+<code>Ctrl + b</code> -&gt; short version: <code>C-b</code>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orga66e0d7" class="outline-4">
+<h4 id="orga66e0d7"><span class="section-number-4">1.6.2</span> Emacs or vi mode</h4>
+<div class="outline-text-4" id="text-1-6-2">
+<p>
+Default emacs but it also depends on global $EDITOR setting in your shell.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5a5a285" class="outline-4">
+<h4 id="org5a5a285"><span class="section-number-4">1.6.3</span> Help</h4>
+<div class="outline-text-4" id="text-1-6-3">
+<p>
+<code>C-b ?</code>
+</p>
+
+
+<div class="figure">
+<p><img src="./assets/tmux_help.png" alt="tmux_help.png" width="100%" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7b26388" class="outline-4">
+<h4 id="org7b26388"><span class="section-number-4">1.6.4</span> Tmux "command line"</h4>
+<div class="outline-text-4" id="text-1-6-4">
+<p>
+<code>C-b :</code>
+</p>
+
+<p>
+Try:
+</p>
+
+<pre class="example">
+C-b :list-windows
+</pre>
+
+
+<div class="figure">
+<p><img src="./assets/tmux_list_windows.png" alt="tmux_list_windows.png" width="100%" />
+</p>
+</div>
+
+<p>
+Press <code>q</code> to quit.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb15e32a" class="outline-4">
+<h4 id="orgb15e32a"><span class="section-number-4">1.6.5</span> Commands</h4>
+<div class="outline-text-4" id="text-1-6-5">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Shortcut</th>
+<th scope="col" class="org-left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">tmux new -s dev</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Create new session "dev"</td>
+</tr>
+
+<tr>
+<td class="org-left">tmux attach -t dev</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Attach to dev session</td>
+</tr>
+
+<tr>
+<td class="org-left">tmux detach-client -s dev</td>
+<td class="org-left">&lt;P&gt; d</td>
+<td class="org-left">Detach from session</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&lt;P&gt; :</td>
+<td class="org-left">tmux command line</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org1e770aa" class="outline-4">
+<h4 id="org1e770aa"><span class="section-number-4">1.6.6</span> Shortcuts</h4>
+<div class="outline-text-4" id="text-1-6-6">
+<p>
+<a href="./tmux_beginners_cheatsheet.html">Cheat sheet</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf07fc60" class="outline-3">
+<h3 id="orgf07fc60"><span class="section-number-3">1.7</span> Next steps</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org80cb584" class="outline-4">
+<h4 id="org80cb584"><span class="section-number-4">1.7.1</span> Configuration</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+~/.tmux.conf
+</p>
+
+<pre class="example">
+# Bindings {{{
+# Remap prefix
+unbind C-b
+set -g prefix C-Space
+
+# Quick key for moving back to the previous window
+bind-key L last-window
+
+# Vim style bindings for pane movement
+bind-key -r h select-pane -L
+bind-key -r j select-pane -D
+bind-key -r k select-pane -U
+bind-key -r l select-pane -R
+
+# Fix issue with tmux repeating -r the arrow directions (meaning when you switch panes you can accidentally jump back to the other pane again)
+bind-key Up    select-pane -U
+bind-key Down  select-pane -D
+bind-key Left  select-pane -L
+bind-key Right select-pane -R
+
+# Make splitting windows easier
+bind-key v split-window -h
+bind-key s split-window -v
+
+# Reload tmux config
+# Same as in command mode :source-file ~/tmux.conf
+# Or outside of tmux with `tmux source-file ~/tmux.conf`
+bind-key r source-file ~/.tmux.conf
+
+# Allow Ctrl+k to clear the history
+bind-key -n C-k clear-history
+
+# Make resizing panes easier
+bind-key &lt; resize-pane -L 5
+bind-key &gt; resize-pane -R 5
+bind-key + resize-pane -U 5
+bind-key - resize-pane -D 5
+bind-key = select-layout even-vertical
+bind-key | select-layout even-horizontal
+# }}}
+
+# Settings {{{
+# Ensure terminal starts with its own colour scheme (defined below)
+set -g default-terminal "screen-256color"
+
+set-window-option -g utf8 on
+
+# Note: if you have EDITOR=vim set
+#       then the following two settings aren't needed
+
+# Use Vi style key bindings to move around command line mode
+set-option -g status-keys vi
+
+# Use Vi style key bindings to move around copy mode
+setw -g mode-keys vi
+
+# Remove delay when pressing esc in Vim
+set -sg escape-time 0
+
+# Prevent tmux from renaming the tab when processes change
+# e.g. if you're in a directory which is a git repo and you fire up Pry then
+# tmux would first rename the tab to 'java' (for Pry) then 'git' when exiting Pry, then finally back to 'zsh'
+set-option -g allow-rename off
+
+# Tells tmux up front what shell to expect
+set-option -g default-shell /bin/zsh
+
+# Set base to 1
+set -g base-index 1
+
+# Enable UTF-8 support in status bar
+set -g status on
+set -g status-utf8 on
+
+# Increase scrollback lines
+set -g history-limit 30000
+
+# Renumber windows automatically after removing a window
+# Prevents my OCD and means I don't have to manually run {move|swap}-window
+set-option -g renumber-windows on
+
+# Colour reference...
+
+# Light Blue = 31
+# Dark Grey  = 234
+# Light Grey = 240
+# White      = 254
+
+# sets right side of the status bar to look bit nicer
+set -g status-right '#[fg=colour234,bg=white,nobold,nounderscore,noitalics]#[fg=colour250,bg=colour234] %a #[fg=colour247,bg=colour234] #[fg=colour247,bg=colour234] %b %d  %R #[fg=colour252,bg=colour234,nobold,nounderscore,noitalics]#[fg=red,bg=colour234]#[fg=white,bg=red] #H'
+
+# sets status bar background colour
+set -g status-bg white
+
+# positions each window name to the left most edge of the status bar
+set -g status-justify 'left'
+
+# sets default pane border colour
+set -g pane-border-fg white
+
+# highlights border of current pane
+set -g pane-active-border-fg red
+
+# sets status bar background colour when executing a command via command-line mode
+set -g message-bg red
+
+# sets colour of status bar font in command-line mode
+set -g message-fg white
+
+# adds separator (in this case some extra breathing space around the list of windows)
+setw -g window-status-separator '  '
+
+# sets design of current window listed in the status bar
+setw -g window-status-current-format '#[fg=colour231,bg=colour31,bold] #I  #W #[fg=colour31,bg=white,nobold,nounderscore,noitalics]'
+
+# Explanation of settings I don't use...
+#
+# sets background colour of status bar when you try to ESC command-line mode:
+# set -g message-command-bg 'colour31'
+#
+# sets colour of status bar font in default mode:
+# setw -g window-status-fg black
+#
+# sets the background colour of the window listed in the status bar:
+# setw -g window-status-bg 'colour234'
+#
+# sets default design around each window listed in the status bar:
+# setw -g window-status-format '#[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]#[default] #I  #W #[fg=colour234,bg=colour234,nobold,nounderscore,noitalics]'
+#
+# sets left side information of status bar:
+# set -g status-left '#[fg=colour16,bg=colour254,bold] #S #[fg=colour254,bg=colour240,nobold,nounderscore,noitalics]#[fg=colour237,bg=colour240] #F #[fg=colour240,bg=colour236,nobold,nounderscore,noitalics]#[fg=colour247,bg=colour236] #W #[fg=colour236,bg=colour234,nobold,nounderscore,noitalics]'
+# }}}
+</pre>
+
+<p>
+<a href="https://github.com/Integralist/ProVim/blob/master/.tmux.conf">https://github.com/Integralist/ProVim/blob/master/.tmux.conf</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3f9a2bb" class="outline-4">
+<h4 id="org3f9a2bb"><span class="section-number-4">1.7.2</span> Session management</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+gem install tmuxinator
+</p>
+
+<p>
+<a href="https://github.com/tmuxinator/tmuxinator">https://github.com/tmuxinator/tmuxinator</a>
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org25e565b" class="outline-4">
+<h4 id="org25e565b"><span class="section-number-4">1.7.3</span> Plugins</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<p>
+<a href="https://github.com/drmad/tmux-git">https://github.com/drmad/tmux-git</a>
+</p>
+
+<p>
+<a href="https://github.com/tmux-plugins">https://github.com/tmux-plugins</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org828d33d" class="outline-3">
+<h3 id="org828d33d"><span class="section-number-3">1.8</span> Resources</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+<a href="https://robots.thoughtbot.com/a-tmux-crash-course">https://robots.thoughtbot.com/a-tmux-crash-course</a>
+</p>
+
+<p>
+<a href="https://pragprog.com/book/bhtmux2/tmux-2">https://pragprog.com/book/bhtmux2/tmux-2</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Marek</p>
+<p class="date">Created: 2017-10-19 Thu 11:48</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
